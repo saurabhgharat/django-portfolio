@@ -1,0 +1,88 @@
+.navbar-default {
+    background-color: #F9742B;
+    height: 50px;
+    line-height:16px;
+
+    padding: 0px 0px;
+
+
+  }
+  .navbar-nav > li > a {
+      color: white !important;
+      text-indent: 8px;
+
+
+
+
+  }
+.navbar-brand{
+      color: white !important;
+
+      padding: 5px 10px ;
+}
+
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+
+  }
+  body{
+    background-color:  #F9742B;
+    font-family: 'Orbitron', sans-serif;
+  }
+
+.navbar-collapse {
+  background-color: #F9742B;
+  width:100%;
+  margin: -1px;
+
+
+}
+.btn-primary {
+    color: #fff;
+    background-color: #f9742b;
+    border-color: #f9742b;
+}
+.copyright{
+  padding-top: 8px;
+    color: #000000!important;
+}
+.jumbotron{
+  background-image:url("/static/html.jpg");
+  background-color: #000000;
+  background-size: cover;
+  height: 450px;
+
+}
+.jumbotron-heading{
+  font-size: 8vw;
+  color:white;
+}
+button, input, optgroup, select, textarea {
+    margin: 5px;
+  }
+.lead{
+  color: white !important;
+}
+.blogcontainer{
+  margin: 18px;
+  background-color: white;
+}
+.blog{
+  background-color: white;
+}
+.blogfooter{
+  background-color: #F9742B ;
+
+}
+.blogtitle{
+
+color: #F9742B;
+}
+.blogfooter >f1{
+    color: black;
+}
+.titlecontainer{
+  color:white;
+  font-size: 5vw;
+}

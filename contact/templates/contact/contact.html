@@ -1,0 +1,115 @@
+
+
+
+
+<!doctype html>
+<html lang="en">
+{% load staticfiles %}
+{% load bootstrap4 %}
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="{%static 'favicon/svg.ico'%}">
+  <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
+
+<link rel=" shortcut icon" href="{%static 'favicon/svg.ico'%}" type="image/x-icon">
+    <title>Contact</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="{%static 'css/master.css' %}">
+
+  </head>
+  <body>
+
+    <header>
+      <nav class="navbar navbar-expand-sm navbar-default">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+   </button>
+
+   <a class="navbar-brand">
+<img src="/static/svg.png" alt="SG" width="40px" height="40px" title="saurabh gharat">
+   </a>
+
+<div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+  <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+    <li class="nav-item active">
+      <a class="nav-link" href="{% url 'home:home' %}">Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{%static 'SaurabhGharatResume.pdf'%}">Resume</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{%url 'bloglist'%}">Blog</a>
+    </li>
+  </ul>
+</nav>
+
+
+
+</nav>
+
+    </header>
+
+    <main role="main">
+
+      <div class="jumbotron" style="display:block;" >
+
+        <div class="container text-center">
+          <h1 class="jumbotron-heading">Saurabh Gharat</h1>
+          <p class="lead text-muted">Welcome to my digital portfolio</p>
+
+        </div>
+      </div>
+
+      <div class="album py-5 bg-light">
+        <div class="container">
+          {%block contact%}
+          <h1 class="Contact" >Contact</h1>
+          <form   role='form' method="POST">
+            {%csrf_token%}
+            <table>
+              {{ contact_form.as_table}}
+            </table>
+
+            <button class="btn btn-primary" type="submit">Submit</button>
+          </form>
+{% endblock %}
+          {% block img %}{% endblock %}
+          <div class="row">
+            {% for job in jobs.all %}
+            <div class="col-md-4">
+              <div class="card mb-4 box-shadow">
+                <img class="card-img-top" src="{{ job.image.url }}">
+                <div class="card-body">
+                  <p class="card-text"><strong>{{ job.summary }}</strong></p>
+                </div>
+              </div>
+            </div>
+             {% endfor %}
+                </div>
+              </div>
+            </div>
+
+
+    </main>
+
+    <footer class="text-muted">
+      <div class="container text-center">
+        <p class="float-right">
+
+        </p>
+        <p class='copyright'><b>©️ SaurabhGharat {% now "Y" %} </b></p>
+
+    </footer>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+
+
+
+  </body>
+</html>
